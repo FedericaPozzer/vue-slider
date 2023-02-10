@@ -47,14 +47,11 @@
                 <div class="my_preview position-relative" id="my-thumbnails">
                     
                     <div class="preview-img d-flex flex-column">
-                        <img v-bind:src="movies[0].image"
-                        alt="thumbnail">
 
-                        <!-- <img src="./img/01.webp" alt="img">
-                        <img src="./img/02.webp" alt="img">
-                        <img src="./img/03.webp" alt="img">
-                        <img src="./img/04.webp" alt="img">
-                        <img src="./img/05.webp" alt="img"> -->
+                        <img v-bind:src="movie.image"
+                        v-for="(movie, index) in movies"
+                        alt="thumbnail">
+                
                     </div>
 
                     <div class="controls position-absolute">
