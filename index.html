@@ -32,7 +32,7 @@
 
 
                     <div class="img d-flex position-relative">
-                        <img v-bind:src="movies[0].image" alt="img">
+                        <img v-bind:src="movies[selected_movie].image" alt="img">
                        
                         <div class="position-absolute text-light text-end bottom-0 end-0 m-5">
                             <h2 id="title"></h2>
@@ -50,6 +50,7 @@
 
                         <img v-bind:src="movie.image"
                         v-for="(movie, index) in movies"
+                        v-bind:class="(index == selected_movie) ? 'thumb-active' : ''"
                         alt="thumbnail">
                 
                     </div>
