@@ -43,12 +43,26 @@ createApp( {
     methods : {
         backward() {
             // alert("go backward"); yes
-            this.selected_movie--;
+            if (this.selected_movie - 1 < 0) {
+                this.selected_movie = this.movies.length - 1;
+            } else {
+                this.selected_movie--;
+            };
         },
 
         forward() {
             // alert("go forward"); yes
-            this.selected_movie++;
+            if (this.selected_movie + 1 >= this.movies.length) {
+                this.selected_movie = 0;
+            } else {
+                this.selected_movie++;
+            };
+        },
+
+        // BONUS 1.
+        go_to_img(index) {
+            // alert("you clicked the thumbanail n. " + index); yes
+            this.selected_movie = index;
         },
     },
 
