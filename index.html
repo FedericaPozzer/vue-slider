@@ -28,8 +28,8 @@
 
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <div class="carousel-container d-flex rounded" id="carousel-container">
-                <div class="my-images d-flex" id="my-images">
 
+                <div class="my-images d-flex" id="my-images">
 
                     <div class="img d-flex position-relative">
                         <img v-bind:src="movies[selected_movie].image" alt="img">
@@ -55,11 +55,11 @@
                 
                     </div>
 
-                    <div class="controls position-absolute">
+                    <div class="controls position-absolute" v-on:click="backward">
                         <i class="fa-solid fa-chevron-up position-absolute"></i>
                     </div>
 
-                    <div class="controls position-absolute">
+                    <div class="controls position-absolute" v-on:click="forward">
                         <i class="fa-solid fa-chevron-down position-absolute"></i>
                     </div>
 

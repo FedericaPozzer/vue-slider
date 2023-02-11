@@ -39,6 +39,20 @@ createApp( {
             selected_movie : 0,
         }
     },
+
+    methods : {
+        backward() {
+            // alert("go backward"); yes
+            this.selected_movie--;
+        },
+
+        forward() {
+            // alert("go forward"); yes
+            this.selected_movie++;
+        },
+    },
+
+
 }).mount("#my-app");
 
 
